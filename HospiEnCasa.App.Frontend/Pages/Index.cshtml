@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Inicio";
+}
+<!-- -->
+<!--Parrafo de bienbenida-->
+<div class="cuerpo">
+    <div class="parrafoBienvenida">
+        <div>
+            <h1> BIENVENIDO A CASA <br><span>TE ESTABAMOS </span> <br>ESPERANDO</h1>
+        </div>
+        <div>
+            <p class="parrafo">Sabemos lo importante que es tu mascota para ti, por eso nos complace <br> ayudarte con
+                el
+                cuidado
+                de tu mascota desde la comodidad de tu hogar <br>
+                Para comenzar inicia sesion, si aun no tienes cuenta registrate<br>
+                para comenzar a usar nuestros servicios</p>
+        </div>
+    </div>
+    <!-- cajon de login y registro -->
+    <div class="formulario">
+        <div>
+            <a class="btn btn-primary" href="../Identity/Account/Login" >Ingresar</a> <br><br>
+            <a class="btn btn-primary" href="../Identity/Account/Register" id="btnRegistrar">Registrarse</a>
+        </div>
+        <div>
+            <p class="links">Siguenos en</p>
+        </div>
+        <div class="iconos">
+            <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.VeterinarioF.AgregarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Agregar un nuevo Veterinario</h1>
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="veterinario.Nombres"></label>
+                <input asp-for="veterinario.Nombres" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="veterinario.Apellidos"></label>
+                <input asp-for="veterinario.Apellidos" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="veterinario.DocumentoIdentidad"></label>
+                <input asp-for="veterinario.DocumentoIdentidad" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="veterinario.TarjetaProfesional"></label>
+                <input asp-for="veterinario.TarjetaProfesional" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>

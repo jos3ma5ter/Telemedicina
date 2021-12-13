@@ -1,0 +1,37 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.FamiliarF.AdminModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Bienvenido @Model.familiar.Nombres @Model.familiar.Apellidos</h1> <br><br>
+
+        <h3>Mascota a cargo</h3>
+
+        <h4>Nombre = Agregar nombre mascota</h4>
+        <h4>Tipo = Agregar tipo de mascota</h4>
+        <h4>Estado de salud actual = Agregar estado salud de la mascota</h4>
+        <br><br>
+        <div>
+            <div>
+                <h5>Signo Vital</h5>
+                <p>mostrar lista de signos vitales </p>
+            </div>
+            <div>
+                <h5>Historial</h5>
+                <p>Mostrar la historia clinica de la mascota</p>
+            </div>
+            <div>
+                <h5>Sugerencia de cuidados</h5>
+                <p>Mostrar las sugerencia de cuidado</p>
+            </div>
+        </div>
+
+        <div>
+            <a class="btn btn-secondary" asp-page="../MascotaF/Agregar" asp-route-id="#">SignoVital</a>
+            <a class="btn btn-secondary" asp-page="./Buscar" asp-route-id="#">Consultar</a>
+            <a class="btn btn-secondary" asp-page="./Actualizar" asp-route-id="#">Actualizar</a>
+            <a class="btn btn-secondary" asp-page="./Eliminar" asp-route-id="#">Eliminar</a>
+        </div>
+    </div>
+</div>

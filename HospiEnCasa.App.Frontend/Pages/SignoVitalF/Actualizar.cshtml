@@ -1,0 +1,28 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SignoVitalF.ActualizarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Actualizar Signo vital</h1>
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="signo.Id"></label>
+                <input asp-for="signo.Id" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label asp-for="signo.FrecuenciaCardiaca"></label>
+                <input asp-for="signo.FrecuenciaCardiaca" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="signo.FrecuenciaRespiratoria"></label>
+                <input asp-for="signo.FrecuenciaRespiratoria" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="signo.Temperatura"></label>
+                <input asp-for="signo.Temperatura" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>

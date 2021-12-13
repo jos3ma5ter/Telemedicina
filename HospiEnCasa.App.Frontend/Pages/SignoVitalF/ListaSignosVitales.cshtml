@@ -1,0 +1,37 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SignoVitalF.ListaSignosVitalesModel
+@{
+}
+<div class="formularios">
+    <h1>Listado de los signos vitales</h1>
+    <br>
+    <table class="table">
+        <br>
+        <a class="btn btn-secondary" asp-page="/SignoVitalF/Consultar">Buscar </a><br><br>
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Cardiaca</th>
+                <th scope="col">Respiratoria</th>
+                <th scope="col">Temperatura</th>
+                <th scope="col">Actualizar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        @foreach (var p in @Model.signo)
+        {
+            <tr>
+                <td data-titulo="Id">@p.Id</td>
+                <td data-titulo="F. Cardíaca">@p.FrecuenciaCardiaca</td>
+                <td data-titulo="F. Respitaria">@p.FrecuenciaRespiratoria</td>
+                <td data-titulo="Temperatura">@p.Temperatura</td>
+                <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                    asp-route-id="@p.Id">Actualizar</a></td>
+                <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                    asp-route-id="@p.Id">Eliminar</a></td>
+            </tr>
+        }
+    </table>
+
+    <a class="btn btn-primary" asp-page="/SignoVitalF/Agregar">Agregar S</a>
+</div>

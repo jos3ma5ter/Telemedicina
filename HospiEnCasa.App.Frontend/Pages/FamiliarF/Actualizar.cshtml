@@ -1,0 +1,34 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@model HospiEnCasa.App.Frontend.Pages.FamiliarF.ActualizarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Actualizar Datos </h1>
+        <form method="post">
+            <div class="form-group">
+                <br>
+                <h3>Datos Del Familiar A Cargo</h3>
+                <br>
+                <label>Id</label>
+                <input asp-for="familiar.Id" class="form-control" readonly>
+                <br>
+                <label>Nombres</label>
+                <input asp-for="familiar.Nombres" class="form-control" placeholder="Ingrese sus nombres" required>
+                <br>
+                <label>Apellidos</label>
+                <input asp-for="familiar.Apellidos" class="form-control" placeholder="Ingrese sus apellido" required>
+                <br>
+                <label>Documento de Identidad</label>
+                <input asp-for="familiar.DocumentoIdentidad" class="form-control"
+                    placeholder="Ingrese su documento de identificacion" required>
+                <br>
+                <label>Correo Electronico</label>
+                <input asp-for="familiar.Email" class="form-control"
+                    placeholder="Ingrese su direccion de correo electronico" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Continuar</button>
+        </form>
+    </div>
+</div>

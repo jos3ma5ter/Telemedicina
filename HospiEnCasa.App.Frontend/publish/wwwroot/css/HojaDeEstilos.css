@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: grey;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 6px;
+    line-height: 30px;
+    /* Vertically center the text there */
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7)50%, rgba(0, 0, 0, 0.7)50%), url(/img/fondo3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: .5s;
+}
+
+nav {
+    height: 100px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    margin-left: 20px;
+}
+
+.bar-btn {
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    z-index: 1;
+    position: absolute;
+    width: 80%;
+    height: 0vh;
+    top: 70px;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 50px;
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.nav-menu li a {
+    color: orange;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#home,
+#btn-logout,
+#btn-login {
+    color: white;
+}
+
+.nav-menu li a .active,
+.nav-menu li a:hover {
+    color: white;
+    transition: .3s;
+}
+
+#home:hover,
+#btn-logout:hover {
+    color: orange;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.nav-menu {
+    height: 90vh;
+}
+
+#check:checked~.nav-menu li {
+    display: block;
+}
+
+.cuerpo {
+    margin: 300px;
+}
+
+.parrafo {
+    margin-top: 25px;
+}
+
+.parrafoBienvenida {
+    top: 110px;
+    width: 90%;
+    color: #fff;
+    left: 5%;
+    position: absolute;
+}
+
+.parrafoBienvenida h1 {
+    font-family: Times New Roman;
+    font-size: 20px;
+    margin-left: 3%;
+    letter-spacing: 2px;
+}
+
+.parrafoBienvenida .parrafo {
+    margin-left: 3%;
+    font-size: 14px;
+    padding-bottom: 25px;
+    font-family: futura;
+    letter-spacing: 1.2px;
+    line-height: 20px;
+}
+
+.parrafoBienvenida span {
+    color: orange;
+    font-size: 28px;
+}
+
+#botonUnirse {
+    width: 160px;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+    top: 100%;
+    font-size: 18px;
+    transition: 0.5s ease;
+}
+
+#btnRegistrar {
+    position: absolute;
+    left: 43%;
+    top: 25PX;
+    transition: .5s ease;
+}
+
+.formulario {
+    width: 75%;
+    height: 200px;
+    top: 380px;
+    left: 10%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%);
+    position: absolute;
+    padding: 25px;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.formulario .btn-primary {
+    font-size: 13px;
+    width: 38%;
+    height: 35px;
+    left: 0%;
+    position: absolute;
+    transition: .5s ease;
+}
+
+
+/*===========================*/
+
+
+/*TEXTO DEL CAJON LOGIN Y REGISTRAR SOBRE LOS ICONOS*/
+
+
+/*===========================*/
+
+.formulario .link {
+    font-family: Arial;
+    color: white;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/*===========================*/
+
+
+/*CARACTERISTICAS DEL TEXTO --UNETE--DEL BOTON REGISTRAR*/
+
+
+/*===========================*/
+
+.formulario .link a {
+    text-decoration: none;
+    color: orange;
+}
+
+
+/*===========================*/
+
+
+/*CARACTERISTICAS DEL TEXTO SIGUENOS EN EL CAJON DE LOGIN Y REGISTRAR*/
+
+
+/*===========================*/
+
+.links {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+}
+
+
+/*===========================*/
+
+
+/*CARACTERISTICAS DEL LOS ICONOS YOUTUBE FACEBOOK ETC*/
+
+
+/*===========================*/
+
+.iconos ion-icon {
+    margin-bottom: 150px;
+    margin: 0px 7px;
+    padding: 5px;
+    width: 15%;
+    color: white;
+    font-size: 20px;
+    padding-top: 5px;
+    transition: .5s ease;
+}
+
+
+/*===========================*/
+
+
+/*CCAMBIAR DE COLOR CUANDO SE PASA EL CURSOR POR LOS ICONOS YOUTUBE FACEBOOK ETC*/
+
+
+/*===========================*/
+
+.iconos ion-icon:hover {
+    color: orange;
+}
+
+
+/*===========================*/
+
+
+/*ventana emergente de iniciar secion*/
+
+
+/*===========================*/
+
+.container-all {
+    /* fondo negro del pop up*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    /* ocupa todo el espacio en la pantalla*/
+    padding: 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+}
+
+
+/*===========================*/
+
+
+/*RESPONSIVE    AUN NO IMPLEMENTADO*/
+
+
+/*===========================*/
+
+@media screen and (min-width: 900px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.7)50%, rgba(0, 0, 0, 0.7)50%), url(/img/fondo3.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        transition: .5s;
+    }
+    .cuerpo {
+        margin: 150px;
+    }
+    .logo {
+        /*position: fixed;*/
+        /*lo deja fijo al dezplazar la paguina*/
+        margin-left: 50px;
+        width: 190px;
+        top: 30px;
+        cursor: pointer;
+    }
+    nav {
+        height: 100px;
+        width: 100%;
+        top: 0;
+    }
+    .bar-btn {
+        display: none;
+    }
+    .nav-menu {
+        /*position: fixed;*/
+        /*lo deja fijo al dezplazar la paguina*/
+        height: 100px;
+        top: 1%;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 0;
+    }
+    .nav-menu li {
+        display: inline;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+    .nav-menu li a {
+        display: inline;
+        font-size: 12px;
+    }
+    #check:checked~.nav-menu li {
+        display: inline;
+    }
+    .parrafoBienvenida {
+        /*background-color: rgb(255, 0, 0);*/
+        width: 50%;
+        color: #fff;
+        top: 200px;
+        position: absolute;
+        left: 10%;
+        transition: all .5s;
+    }
+    .parrafoBienvenida .parrafo {
+        font-size: 15px;
+    }
+    .parrafoBienvenida h1 {
+        font-size: 40px;
+    }
+    .parrafoBienvenida span {
+        font-size: 56px;
+    }
+    #botonUnirse {
+        width: 160px;
+        height: 40px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-size: 18px;
+        transition: 0.8s ease;
+    }
+    .formulario {
+        width: 20%;
+        height: 280px;
+        position: absolute;
+        border-radius: 10px;
+        padding: 25px;
+        top: 200px;
+        left: 70%;
+        transition: all .5s;
+    }
+    .formulario .btn-primary {
+        width: 100%;
+        margin-top: 10px;
+        left: 0;
+        position: relative;
+        transition: .5s ease;
+    }
+    #btnRegistrar {
+        position: relative;
+        margin-top: 10px;
+        left: 0;
+        top: 0;
+        transition: .5s ease;
+    }
+    .iconos ion-icon {
+        margin: 0px 10px;
+        padding: 10px;
+        width: 15%;
+        font-size: 20px;
+        padding-top: 5px;
+    }
+    footer {
+        background-color: grey;
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 15px;
+        line-height: 30px;
+        /* Vertically center the text there */
+    }
+}

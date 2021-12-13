@@ -1,0 +1,36 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SugerenciaF.ListaSugerenciaModel
+@{
+}
+<div class="formularios">
+    <h1>Listado de los sugerencia de cuidado</h1>
+    <table class="table">
+        <br>
+        <a class="btn btn-secondary" asp-page="/SugerenciaF/Buscar">Buscar </a>
+        <br><br>
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Fecha y Hora</th>
+                <th scope="col">Actualizar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        @foreach (var p in @Model.sugerencia)
+        {
+            <tr>
+                <td data-titulo="Id">@p.Id</td>
+                <td data-titulo="Descripción">@p.Descripcion</td>
+                <td data-titulo="Fecha Hora">@p.FechaHora</td>
+                <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                    asp-route-id="@p.Id">Actualizar</a></td>
+                <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                    asp-route-id="@p.Id">Eliminar</a></td>
+            </tr>
+        }
+    </table>
+
+    <a class="btn btn-primary" asp-page="/SugerenciaF/Agregar">Agregar</a>
+
+</div>

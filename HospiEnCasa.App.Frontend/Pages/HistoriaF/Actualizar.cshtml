@@ -1,0 +1,21 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@model HospiEnCasa.App.Frontend.Pages.HistoriaF.ActualizarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Actualizar Informacion Historia</h1>
+        <form method="post">
+            <div class="form-group">
+                <div>
+                    <label asp-for="historia.Id"></label><br>
+                    <input asp-for="historia.Id" class="form-control" readonly><br>
+                    <label asp-for="historia.Diagnostico"></label><br>
+                    <input asp-for="historia.Diagnostico" class="form-control" required><br>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>

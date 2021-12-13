@@ -1,0 +1,20 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SignoVitalF.AgregarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Agregar signo vital</h1>
+        <form method="post"> <br>
+            <label>Frecuencia Cardiaca</label><br>
+            <input asp-for="signo.FrecuenciaCardiaca" class="form-control"><br>
+
+            <label>Frecuencia Respiratoria</label><br>
+            <input asp-for="signo.FrecuenciaRespiratoria" class="form-control"><br>
+
+            <label>Temperatura</label><br>
+            <input asp-for="signo.Temperatura" class="form-control"> <br><br>
+            <button type="submit" class="btn btn-primary">Enviar</button> <br>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@model HospiEnCasa.App.Frontend.Pages.MascotaF.AddHistoriaModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Agregar alguna sugerencia de cuidado al historial</h1>
+        <form method="post"> <br>
+            <label asp-for="mascota.Id"></label>
+            <input asp-for="mascota.Id" class="form-control" readonly>
+            <label>Detalles del diagnostico</label><br>
+            <input asp-for="historia.Diagnostico" class="form-control"><br>
+            <button type="submit" class="btn btn-primary">Enviar</button> <br>
+        </form>
+    </div>
+</div>

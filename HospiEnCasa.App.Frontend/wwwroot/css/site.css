@@ -1,0 +1,58 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+
+/* Provide sufficient contrast against white background */
+
+a {
+    color: orange;
+}
+
+.btn-primary {
+    color: rgb(49, 26, 26);
+    background-color: orange;
+    border-color: rgb(209, 143, 21);
+    border-radius: 50px;
+}
+
+#btnAbrirPopup {
+    color: orange;
+    background-color: white;
+    border-color: white;
+}
+
+.btn-primary:hover {
+    color: orange;
+    background-color: white;
+    border-color: white;
+}
+
+#btnAbrirPopup:hover {
+    color: rgb(49, 26, 26);
+    background-color: orange;
+    border-color: rgb(209, 143, 21);
+}
+
+.btn-secondary:hover {
+    color: orange;
+    background-color: rgb(112, 71, 27);
+    border-color: rgb(112, 71, 27);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: rgb(49, 26, 26);
+    background-color: orange;
+    border-color: rgb(209, 143, 21);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}

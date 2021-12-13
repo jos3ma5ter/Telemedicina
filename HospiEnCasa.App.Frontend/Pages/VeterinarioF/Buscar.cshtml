@@ -1,0 +1,46 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@model HospiEnCasa.App.Frontend.Pages.VeterinarioF.BuscarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Buscar Veterinario Por Id</h1>
+        <form method="get">
+            <br>
+            <input type="text" class="form-control" asp-for="veterinario.Id" name="id"
+                placeholder="Introduzca el ID de el veterinario" required> <br>
+            <input type="submit" class="btn btn-secondary">
+        </form>
+        <br> <br>
+        <thead>
+            <table class="table">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Documento</th>
+                    <th scope="col">Tarjeta P</th>
+                    <th scope="col">Agregar</th>
+                </tr>
+        </thead>
+        @if (@Model.veterinario != null)
+        {
+            <tr>
+                <td data-titulo="Id">@Model.veterinario.Id</td>
+                <td data-titulo="Nombres">@Model.veterinario.Nombres</td>
+                <td data-titulo="Apellidos">@Model.veterinario.Apellidos</td>
+                <td data-titulo="Identificación">@Model.veterinario.DocumentoIdentidad</td>
+                <td data-titulo="No. Profesional">@Model.veterinario.TarjetaProfesional</td>
+                <td data-titulo="Mascota"><a class="btn btn-secondary" asp-page="./Implementar"
+                    asp-route-id="@Model.veterinario.Id">Mascota</a></td>
+                <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                    asp-route-id="@Model.veterinario.Id">Actualizar</a>
+                </td>
+                <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                    asp-route-id="@Model.veterinario.Id">Eliminar</a></td>
+            </tr>
+        }
+        </table>
+    </div>
+</div>

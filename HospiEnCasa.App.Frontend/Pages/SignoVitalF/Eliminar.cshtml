@@ -1,0 +1,20 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SignoVitalF.EliminarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Eliminar signo vital</h1>
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="signo.Id"></label>
+                <input asp-for="signo.Id" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label asp-for="signo.FrecuenciaCardiaca"></label>
+                <input asp-for="signo.FrecuenciaCardiaca" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Continuar</button>
+        </form>
+    </div>
+</div>

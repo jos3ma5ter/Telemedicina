@@ -1,0 +1,61 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@using HospiEnCasa.App.Persistencia
+@model HospiEnCasa.App.Frontend.Pages.MascotaF.ListaMascotasModel
+@{
+    ViewData["Title"] = "Busqueda Mascotas";
+}
+<div class="formularios">
+    <h1>Listado de mascotas</h1>
+    <table class="table">
+        <br>
+        <a class="btn btn-secondary" asp-page="/MascotaF/Buscar">Buscar </a>
+        <br> <br>
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Tipo de mascota</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estado de salud</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Genero</th>
+                <th scope="col">Raza</th>
+                @* <th scope="col">Direccion</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Latitud</th>
+                    <th scope="col">Longitud</th> *@
+                <th scope="col">Signo Vital</th>
+                <th scope="col">Historia</th>
+                <th scope="col">Actualizar</th>
+                <th scope="col">Eliminar</th>
+            </tr>
+        </thead>
+        @foreach (var p in @Model.mascota)
+
+        {
+            <tr>
+                <td data-titulo="Id">@p.Id</td>
+                <td data-titulo="Tipo">@p.TipoMascota</td>
+                <td data-titulo="Nombre">@p.Nombre</td>
+                <td data-titulo="Estado Salud">@p.EstadoSalud</td>
+                <td data-titulo="Edad">@p.Edad</td>
+                <td data-titulo="Género">@p.Genero</td>
+                <td data-titulo="Raza">@p.Raza</td>
+                @*<td data-titulo="Direccion">@p.Direccion</td>
+                    <td data-titulo="Ciudad">@p.Ciudad</td>
+                    <td data-titulo="Latitud">@p.Latitud</td>
+                    <td data-titulo="Longitud">@p.Longitud</td> *@
+                <td data-titulo="Signo"><a class="btn btn-secondary" asp-page="./AddSignoV"
+                    asp-route-id="@p.Id">SignoVital</a></td>
+                <td data-titulo="Historia"><a class="btn btn-secondary" asp-page="./AddHistoria"
+                    asp-route-id="@p.Id">Historia</a></td>
+                <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                    asp-route-id="@p.Id">Actualizar</a></td>
+                <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                    asp-route-id="@p.Id">Eliminar</a></td>
+            </tr>
+        }
+    </table>
+
+    <a class="btn btn-primary" asp-page="/MascotaF/Agregar">Agregar</a>
+</div>

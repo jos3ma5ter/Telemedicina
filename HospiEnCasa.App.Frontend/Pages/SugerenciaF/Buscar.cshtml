@@ -1,0 +1,37 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SugerenciaF.BuscarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Buscar Id De Sugerencia De Cuidado</h1>
+        <form method="get">
+            <br>
+            <input type="text" class="form-control" asp-for="sugerencia.Id" name="id"
+                placeholder="Introduzca el ID de la sugerencia de cuidado" required> <br>
+            <input type="submit" class="btn btn-secondary">
+        </form>
+        <br> <br>
+        <thead>
+            <table class="table">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Fecha y Hora</th>
+                </tr>
+        </thead>
+        @if (@Model.sugerencia != null)
+        {
+            <tr>
+                <td data-titulo="Id">@Model.sugerencia.Id</td>
+                <td data-titulo="Descripción">@Model.sugerencia.Descripcion</td>
+                <td data-titulo="Fecha Hora">@Model.sugerencia.FechaHora</td>
+                <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                    asp-route-id="@Model.sugerencia.Id">Actualizar</a></td>
+                <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                    asp-route-id="@Model.sugerencia.Id">Eliminar</a></td>
+            </tr>
+        }
+        </table>
+    </div>
+</div>

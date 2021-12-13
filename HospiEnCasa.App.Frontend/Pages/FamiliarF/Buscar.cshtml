@@ -1,0 +1,46 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@model HospiEnCasa.App.Frontend.Pages.FamiliarF.BuscarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Buscar Familiar</h1><br>
+        <br>
+        <form method="get">
+            <input type="text" class="form-control" name="id" asp-for="familiar.Id"
+                placeholder="Ingresa el ID del familiar a cargo"><br>
+
+            <input type="submit" class="btn btn-secondary">
+        </form>
+        <br><br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Documentos</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Id masco</th>
+                </tr>
+            </thead>
+            @if (@Model.familiar != null)
+            {
+                <tr>
+                    <td data-titulo="Id">@Model.familiar.Id</td>
+                    <td data-titulo="Nombres">@Model.familiar.Nombres</td>
+                    <td data-titulo="Apellidos">@Model.familiar.Apellidos</td>
+                    <td data-titulo="Identificación">@Model.familiar.DocumentoIdentidad</td>
+                    <td data-titulo="Email">@Model.familiar.Email</td>
+                    <td data-titulo="Mascota">@Model.mas.Nombre</td>
+                    <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                        asp-route-id="@Model.familiar.Id">Actualizar</a>
+                    </td>
+                    <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                        asp-route-id="@Model.familiar.Id">Eliminar</a></td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>

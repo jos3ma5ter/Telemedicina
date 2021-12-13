@@ -1,0 +1,24 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SugerenciaF.ActualizarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Actualizar Sugerencia de cuidado</h1>
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="sugerencia.Id"></label>
+                <input asp-for="sugerencia.Id" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label asp-for="sugerencia.Descripcion"></label>
+                <input asp-for="sugerencia.Descripcion" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="sugerencia.FechaHora"></label>
+                <input asp-for="sugerencia.FechaHora" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@model HospiEnCasa.App.Frontend.Pages.MascotaF.ActualizarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Actualizar Informacion De La Mascota</h1>
+        <form method="post">
+            <div class="form-group">
+                <div>
+                    <label asp-for="mascota.Id"></label><br>
+                    <input asp-for="mascota.Id" class="form-control" readonly><br>
+                    <label>Selecione el tipo de su mascota</label><br>
+                    <select asp-for="mascota.TipoMascota" asp-items="Html.GetEnumSelectList<TipoMascota>()"
+                        class="form-control"></select><br>
+                    <label asp-for="mascota.Nombre"></label><br>
+                    <input asp-for="mascota.Nombre" class="form-control" required><br>
+                    <label asp-for="mascota.EstadoSalud"></label><br>
+                    <input asp-for="mascota.EstadoSalud" class="form-control" required><br>
+                    <label asp-for="mascota.Edad"></label><br>
+                    <input asp-for="mascota.Edad" class="form-control" required><br>
+                    <label>Selecione el Genero de su mascota</label>
+                    <select asp-for="mascota.Genero" asp-items="Html.GetEnumSelectList<Genero>()"
+                        class="form-control"></select><br>
+                    <label asp-for="mascota.Raza"></label><br>
+                    <input asp-for="mascota.Raza" class="form-control" required><br>
+                </div>
+                <div>
+                    <br>
+                    <h3>Ubicacion de la mascota</h3>
+                    <br>
+                    <label>Direccion</label>
+                    <input asp-for="mascota.Direccion" class="form-control" required>
+                    <br>
+                    <label>Ciudad</label>
+                    <input asp-for="mascota.Ciudad" class="form-control" required>
+                    <br>
+                    <p>Nota</p>
+                    <p>Para poder hacer uso de los servicios de urgencias, es importante que permitas al navegador
+                        acceder a
+                        tu ubicacion para poder obtener las cordenadas exacta de
+                        el lugar donde se ubica tu mascota , de lo contrario no podras continuar con el registro. <br>
+                        Si quieres conocer mas sobre el uso y autorizacion de los servicios de ubicacion puedes ingresar
+                        <a href="#">Aqui</a> para saber mas acerca de los terminos y condicines del uso de
+                        hospitalizacion
+                        en casa</p>
+
+                    <a class="btn btn-secondary" onclick="PermitirSerLocalizado()">Obtener cordenadas</a>
+                    <br> <br>
+                    <label>latitud</label>
+                    <p id="mymapLa" class="form-control"></p>
+                    <label>longitud</label>
+                    <p id="mymapLo" class="form-control"></p>
+                    <script>
+                        function PermitirSerLocalizado() {
+                            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(PermitirLocalizar1, denegarPermiso)
+                            } else {
+                                alert("no puedes obtener geo")
+                            }
+                        }
+                        function PermitirLocalizar1(obCor) {
+                            var La = obCor.coords.latitude;
+                            var Lo = obCor.coords.latitude;
+
+                            document.getElementById("mymapLa").innerHTML = La;
+                            document.getElementById("mymapLo").innerHTML = Lo;
+                        }
+
+                        function denegarPermiso() {
+                            alert("debes darnos autorizacion para continuar con el registro")
+                        }
+                    </script>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>

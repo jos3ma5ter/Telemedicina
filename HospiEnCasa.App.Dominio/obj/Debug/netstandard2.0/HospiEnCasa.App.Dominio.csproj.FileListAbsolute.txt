@@ -1,0 +1,27 @@
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.deps.json
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.dll
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.pdb
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.csprojAssemblyReference.cache
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.AssemblyInfoInputs.cache
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.AssemblyInfo.cs
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.dll
+C:\Veterinaria\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.pdb
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.deps.json
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.dll
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.pdb
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.csprojAssemblyReference.cache
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.AssemblyInfoInputs.cache
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.AssemblyInfo.cs
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.dll
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.pdb
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.deps.json
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.dll
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\bin\Debug\netstandard2.0\HospiEnCasa.App.Dominio.pdb
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.csprojAssemblyReference.cache
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.AssemblyInfo.cs
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.dll
+C:\Users\giral\Documents\Mision TIC\Desarrollo de software\Proyecto\José\HospiEnCasa.App\HospiEnCasa.App.Dominio\obj\Debug\netstandard2.0\HospiEnCasa.App.Dominio.pdb

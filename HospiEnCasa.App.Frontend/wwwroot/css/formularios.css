@@ -1,0 +1,154 @@
+.formularios {
+    margin-top: 50px;
+    margin-bottom: 150px;
+    border-radius: 30px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: -5px 10px 10px 1px rgba(138, 130, 130, 0.5);
+    /*eje x, eje y, desenfoque, extencion, color*/
+}
+
+.formularios h1 {
+    color: orange;
+    margin-left: 40px;
+    padding-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 5px 10px;
+}
+
+.wrap {
+    width: 800px;
+    max-width: 90%;
+    margin: 30px auto;
+}
+
+ul.tabs {
+    visibility: hidden;
+    width: 100%;
+    background: rgb(165, 165, 165);
+    border-radius: 30px;
+    list-style: none;
+    display: flex;
+}
+
+
+/*
+ul.tabs li{
+    width: 18%;
+}
+ul.tabs li a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding: 20px 0px;
+}
+
+.activo{
+    
+    border-radius: 30px;
+    background: rgb(47, 0, 255);
+    transition: .3s ease;
+}
+ul.tabs li a .tab-text{
+    margin-left: 8px;
+}*/
+
+.secciones {
+    width: 100%;
+    padding: 10px;
+    margin-top: 0;
+}
+
+#btn-navegar {
+    width: 150px;
+}
+
+input.form-control,
+select.form-control,
+.btn-secondary,
+p.form-control {
+    border-radius: 30px;
+}
+
+#btn-registrarF {
+    position: relative;
+    width: 150px;
+    margin: 0px 70% 50px;
+    /*ALTO DERECHA ABAJO */
+}
+
+@media (max-width: 30em) {
+    table {
+        width: 100%;
+    }
+    table tr {
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    table td[data-titulo] {
+        display: flex;
+    }
+    table td[data-titulo]::before {
+        content: attr(data-titulo);
+        width: 105px;
+    }
+    table thead {
+        display: none;
+    }
+    .formularios {
+        padding: 5px;
+    }
+    .btn-primary {
+        margin: 0px 30px 30px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .espacio {
+        padding: 20px;
+    }
+    .formularios {
+        margin-top: 0px;
+        border-radius: 30px;
+        padding: 3px;
+    }
+    .formularios h1 {
+        margin-left: 45px;
+        padding-top: 10px;
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    label {
+        font-size: 12px;
+    }
+     :placeholder-shown {
+        font-size: 10px;
+    }
+    .secciones {
+        width: 100%;
+        padding: 1px;
+        margin-top: -70px;
+    }
+    #btn-navegar {
+        width: 100px;
+    }
+    #btn-registrarF {
+        position: relative;
+        width: 100px;
+        margin: 0px 50% 50px;
+        /*ALTO DERECHA ABAJO */
+    }
+}

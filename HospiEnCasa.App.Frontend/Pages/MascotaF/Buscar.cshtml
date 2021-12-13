@@ -1,0 +1,60 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.MascotaF.BuscarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Buscar Mascota</h1><br>
+        <form method="get">
+            <br>
+            <input type="text" class="form-control" asp-for="mascota.Id" name="id"
+                placeholder="Introduzca el ID de la mascota" required> <br>
+            <input type="submit" class="btn btn-secondary">
+        </form>
+        <br> <br>
+        <thead>
+            <table class="table">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Tipo de mascota</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Estado de salud</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">Genero</th>
+                    <th scope="col">Raza</th>
+                    <th scope="col">Direccion</th>
+                    <th scope="col">Ciudad</th>
+                    <th scope="col">Latitud</th>
+                    <th scope="col">Longitud</th>
+                    <th scope="col"></th>
+                    <th scope="col">AGREGAR</th>
+                    <th scope="col">CONSULTAR</th>
+                </tr>
+        </thead>
+        @if (@Model.mascota != null)
+        {
+            <tr>
+                <td data-titulo="Id">@Model.mascota.Id</td>
+                <td data-titulo="Tipo">@Model.mascota.TipoMascota</td>
+                <td data-titulo="Nombre">@Model.mascota.Nombre</td>
+                <td data-titulo="Estado Salud">@Model.mascota.EstadoSalud</td>
+                <td data-titulo="Edad">@Model.mascota.Edad</td>
+                <td data-titulo="Género">@Model.mascota.Genero</td>
+                <td data-titulo="Raza">@Model.mascota.Raza</td>
+                <td data-titulo="Dirección">@Model.mascota.Direccion</td>
+                <td data-titulo="Ciudad">@Model.mascota.Ciudad</td>
+                <td data-titulo="Latitud">@Model.mascota.Latitud</td>
+                <td data-titulo="Longitud">@Model.mascota.Longitud</td>
+                <td data-titulo="Signo"><a class="btn btn-secondary" asp-page="./AddSignoV"
+                    asp-route-id="@Model.mascota.Id">SignoVital</a></td>
+                <td data-titulo="Historia"><a class="btn btn-secondary" asp-page="./AddHistoria"
+                    asp-route-id="@Model.mascota.Id">Historia</a></td>
+                <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                    asp-route-id="@Model.mascota.Id">Actualizar</a></td>
+                <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                    asp-route-id="@Model.mascota.Id">Eliminar</a></td>
+            </tr>
+        }
+        </table>
+    </div>
+</div>

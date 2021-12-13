@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\giral\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\giral\\.nuget\\packages"
+    ]
+  }
+}

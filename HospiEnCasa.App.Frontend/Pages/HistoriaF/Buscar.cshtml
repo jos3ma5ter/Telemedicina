@@ -1,0 +1,38 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.HistoriaF.BuscarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Buscar Histiria</h1><br>
+        <form method="get">
+            <br>
+            <input type="text" class="form-control" asp-for="historia.Id" name="id"
+                placeholder="Introduzca el ID de la historia" required> <br>
+            <input type="submit" class="btn btn-secondary">
+        </form>
+        <br> <br>
+        <thead>
+            <table class="table">
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Diagnostico</th>
+                    <th scope="col">AGREGAR</th>
+                </tr>
+        </thead>
+        @if (@Model.historia != null)
+        {
+            <tr>
+                <td data-titulo="Id">@Model.historia.Id</td>
+                <td data-titulo="Diagnóstico">@Model.historia.Diagnostico</td>
+                <td data-titulo="Sugerencia"><a class="btn btn-secondary" asp-page="./AddSugerenciaLista"
+                    asp-route-id="@Model.historia.Id">Sugerencia</a></td>
+                <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                    asp-route-id="@Model.historia.Id">Actualizar</a></td>
+                <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                    asp-route-id="@Model.historia.Id">Eliminar</a></td>
+            </tr>
+        }
+        </table>
+    </div>
+</div>

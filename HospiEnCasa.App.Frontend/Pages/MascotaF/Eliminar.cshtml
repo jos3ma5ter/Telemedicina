@@ -1,0 +1,21 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.MascotaF.EliminarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Eliminar paciente</h1>
+
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="mascota.Id"></label>
+                <input asp-for="mascota.Id" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label asp-for="mascota.Nombre"></label>
+                <input asp-for="mascota.Nombre" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Continuar</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.HistoriaF.EliminarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Eliminar Historia</h1>
+        <form method="post">
+            <div class="form-group">
+                <div>
+                    <label asp-for="historia.Id"></label><br>
+                    <input asp-for="historia.Id" class="form-control"><br>
+                </div>
+                <div>
+                    <label asp-for="historia.Diagnostico"></label><br>
+                    <input asp-for="historia.Diagnostico" class="form-control"><br>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>

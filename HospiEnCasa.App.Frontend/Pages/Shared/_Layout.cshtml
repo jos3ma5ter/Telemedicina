@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PetsHome</title>
+    <script src="https://kit.fontawesome.com/712575d4a5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/relases/v5.5.0/css/all.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monserrat:300,400,600 Open¡Sans" />
+    <link rel="shortcut icon" href="~/img/logoPestana32px.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/HojaDeEstilos.css" />
+    <link rel="stylesheet" href="~/css/formularios.css" />
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav>
+                <div>
+                    <img src="~/img/logo2.png" alt="" class="logo">
+                </div>
+                <input type="checkbox" id="check">
+                <label for="check" class="bar-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <ul class="nav-menu">
+                    <li><a href="/index" class="active" id="home">Home</a></li>
+                    <li><a href="#" class="active">About</a></li>
+                    <li><a href="#" class="active">Services</a></li>
+                    <li><a href="/FamiliarF/ListaFamiliares" class="active">Familiares</a></li>
+                    <li><a href="/VeterinarioF/ListaVeterinarios" class="active">Veterinarios</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - Petshouse - Todos los derechos reservados. <a asp-area="" asp-page="/Privacy">Politica de
+                privacidad|</a><a asp-area="" asp-page="#">Aviso legal|</a> <a asp-area="" asp-page="/Privacy">Mapa del
+                sitio|</a>Colombia.
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="popup.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

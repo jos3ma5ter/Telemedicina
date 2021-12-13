@@ -1,0 +1,32 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.VeterinarioF.ActualizarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Actualizar Veterinario</h1>
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="veterinario.Id"></label>
+                <input asp-for="veterinario.Id" class="form-control" readonly>
+            </div>
+            <div class="form-group">
+                <label asp-for="veterinario.Nombres"></label>
+                <input asp-for="veterinario.Nombres" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="veterinario.Apellidos"></label>
+                <input asp-for="veterinario.Apellidos" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="veterinario.DocumentoIdentidad"></label>
+                <input asp-for="veterinario.DocumentoIdentidad" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label asp-for="veterinario.TarjetaProfesional"></label>
+                <input asp-for="veterinario.TarjetaProfesional" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>

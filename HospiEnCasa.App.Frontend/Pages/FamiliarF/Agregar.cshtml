@@ -1,0 +1,124 @@
+﻿@page
+@using HospiEnCasa.App.Dominio
+@model HospiEnCasa.App.Frontend.Pages.FamiliarF.AgregarModel
+
+@{
+}
+<div class="formularios">
+    <h1>Agregar Paciente</h1>
+    <form method="post">
+        <div class="wrap">
+            <ul class="tabs">
+                <li><a href="#tab1" ><span class="tab-text">Persona</span></a></li>
+                <li><a href="#tab2"><span>mascota</span></a></li>
+                <li><a href="#tab3"><span>ubicacion</span></a></li>
+            </ul>
+            <div class="secciones">
+                <div id="tab1">
+                    <br>
+                    <h3>Datos Del Familiar A Cargo</h3>
+                    <br>
+                    <label>Nombres</label>
+                    <input asp-for="familiar.Nombres" class="form-control" placeholder="Ingrese sus nombres" required>
+                    <br>
+                    <label>Apellidos</label>
+                    <input asp-for="familiar.Apellidos" class="form-control" placeholder="Ingrese sus apellido"
+                        required>
+                    <br>
+                    <label>Documento de Identidad</label>
+                    <input asp-for="familiar.DocumentoIdentidad" class="form-control"
+                        placeholder="Ingrese su documento de identificacion" required>
+                    <br>
+                    <label>Correo Electronico</label>
+                    <input asp-for="familiar.Email" class="form-control"
+                        placeholder="Ingrese su direccion de correo electronico" required>
+                    <br>
+                    <a class="btn btn-primary" href="#tab2" id="btn-navegar">Continuar<a>
+                            <br><br>
+                </div>
+                <div id="tab2">
+                    <br>
+                    <h3>Datos De La Mascota</h3>
+                    <br>
+                    <label>Selecione el tipo de su mascota</label>
+                    <select asp-for="mascota.TipoMascota" asp-items="Html.GetEnumSelectList<TipoMascota>()"
+                        class="form-control"></select>
+                    <br>
+                    <label>Nombre de su mascota</label>
+                    <input asp-for="mascota.Nombre" class="form-control" placeholder="Ingrese el nombre de su mascota"  required>
+                    <br>
+                    <label>Edad de la mascota</label>
+                    <input asp-for="mascota.Edad" class="form-control" placeholder="Ingrese la edad de la mascota"
+                        required>
+                    <br>
+                    <label>Selecione el Genero de su mascota</label>
+                    <select asp-for="mascota.Genero" asp-items="Html.GetEnumSelectList<Genero>()"
+                        class="form-control"></select>
+                    <br>
+                    <label asp-for="mascota.Raza"></label>
+                    <input asp-for="mascota.Raza" class="form-control"  placeholder="Ingrese la raza de su mascota" required>
+                    <br>
+                    <label>Cual es el estado de salud actual de la mascota?</label>
+                    <input asp-for="mascota.EstadoSalud" class="form-control" placeholder="Ingrese el estado de salud de su mascota" required>
+                    <br><br>
+                    <a class="btn btn-primary" href="#tab3" id="btn-navegar">Continuar<a>
+                    <br><br>
+                    <a class="btn btn-secondary" href="#tab1" id="btn-navegar">Atras<a>
+                    <br><br>
+                            
+                </div>
+                <div id="tab3">
+                    <br>
+                    <h3>Ubicacion de la mascota</h3>
+                    <br>
+                    <label>Direccion</label>
+                    <input asp-for="mascota.Direccion" class="form-control" placeholder="Ingrese la direcion donde se encuentra su mascota"required>
+                    <br>
+                    <label>Ciudad</label>
+                    <input asp-for="mascota.Ciudad" class="form-control" placeholder="Ciudad donde se encuentra la mascota" required>
+                    <br>
+                    <p>Nota</p>
+                    <p>Para poder hacer uso de los servicios de urgencias, es importante que permitas al navegador
+                        acceder a tu ubicacion para poder obtener las cordenadas exacta de
+                        el lugar donde se ubica tu mascota , de lo contrario no podras continuar con el registro.
+                        <br>
+                        Si quieres conocer mas sobre el uso y autorizacion de los servicios de ubicacion puedes
+                        ingresar <a href="#">Aqui</a> para saber mas acerca de los terminos y condicines del uso de
+                        hospitalizacion en casa
+                    </p>
+
+                    <a class="btn btn-primary" onclick="PermitirSerLocalizado()" href="#">Obtener cordenadas</a>
+                    <br> <br>
+                    <label>latitud</label>
+                    <p id="mymapLa" class="form-control"></p>
+                    <label>longitud</label>
+                    <p id="mymapLo" class="form-control"></p>
+                    <script>
+                        function PermitirSerLocalizado() {
+                            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(PermitirLocalizar1, denegarPermiso)
+                            } else {
+                                alert("no puedes obtener geo")
+                            }
+                        }
+                        function PermitirLocalizar1(obCor) {
+                            var La = obCor.coords.latitude;
+                            var Lo = obCor.coords.latitude;
+
+                            document.getElementById("mymapLa").innerHTML = La;
+                            document.getElementById("mymapLo").innerHTML = Lo;
+                        }
+
+                        function denegarPermiso() {
+                            alert("debes darnos autorizacion para continuar con el registro")
+                        }
+
+                    </script>
+                    <a class="btn btn-secondary" href="#tab2" id="btn-navegar">Atras<a>
+                            <br><br>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="btn-registrarF">Enviar</button>
+    </form>
+</div>

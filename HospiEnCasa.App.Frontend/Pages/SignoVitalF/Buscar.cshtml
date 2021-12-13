@@ -1,0 +1,39 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.SignoVitalF.BuscarModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Buscar signo vital</h1>
+        <form method="get">
+            <br>
+            <input type="text" class="form-control" asp-for="signo.Id" name="id"
+                placeholder="Introduzca el ID de el signo " required> <br>
+            <input type="submit" class="btn btn-secondary">
+        </form>
+        <br> <br>
+        <thead>
+            <br>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Cardiaca</th>
+                        <th scope="col">Respiratoria</th>
+                        <th scope="col">Temperatura</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td data-titulo="Id">@Model.signo.Id</td>
+                    <td data-titulo="F. Cardíaca">@Model.signo.FrecuenciaCardiaca</td>
+                    <td data-titulo="F. Respiratoria">@Model.signo.FrecuenciaRespiratoria</td>
+                    <td data-titulo="Temperatura">@Model.signo.Temperatura</td>
+                    <td data-titulo="Actualizar"><a class="btn btn-secondary" asp-page="./Actualizar"
+                            asp-route-id="@Model.signo.Id">Actualizar</a>
+                    </td>
+                    <td data-titulo="Eliminar"><a class="btn btn-secondary" asp-page="./Eliminar"
+                            asp-route-id="@Model.signo.Id">Eliminar</a></td>
+                </tr>
+            </table>
+    </div>
+</div>

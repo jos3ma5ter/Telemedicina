@@ -1,0 +1,22 @@
+﻿@page
+@model HospiEnCasa.App.Frontend.Pages.HistoriaF.AddSugerenciaListaModel
+@{
+}
+<div class="formularios">
+    <div class="espacio">
+        <h1>Agregar una sugerencia de cuidado a la mascota</h1>
+        <form method="post"> <br>
+            <div class="form-group">
+                <label asp-for="historia.Id"></label>
+                <input asp-for="historia.Id" class="form-control" readonly>
+
+                <label asp-for="sugerencia.Descripcion"></label>
+                <input asp-for="sugerencia.Descripcion" class="form-control" required>
+
+                <label asp-for="sugerencia.FechaHora"></label>
+                <input asp-for="sugerencia.FechaHora" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary"> Continuar</button>
+        </form>
+    </div>
+</div>
